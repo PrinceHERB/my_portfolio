@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Justin Paul Vales</title>
+    <link rel="stylesheet" href="qwerty.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-circle">JP</div>
+            <div class="logo-text">JUSTIN PAUL VALES</div>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-cta">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section reveal active">
+        <div class="container">
+            <h2 class="section-title">Media Gallery</h2>
+            <div class="grid-layout">
+                <div class="ui-card">
+                    <h3>Project Screenshot</h3>
+                    <p>A look at the user interface design.</p>
+                    <img src="votin_portal.png" alt="Project Screenshot" style="width:100%; border-radius: 10px; margin-top: 10px;">
+                </div>
+
+                <div class="ui-card">
+                    <h3>System Demo</h3>
+                    <p>A video demonstration of the web application features.</p>
+                    <div style="margin-top: 10px;">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen style="border-radius: 10px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><p>&copy; 2026 Justin Paul Vales. All Rights Reserved.</p></div></footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+        const navList = document.getElementById('nav-list');
+
+        mobileBtn.addEventListener('click', () => {
+            navList.classList.toggle('show-nav');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show-nav');
+            });
+        });
+    </script>
+</body>
+</html>

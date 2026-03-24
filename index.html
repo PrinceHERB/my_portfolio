@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Paul Vales | Portfolio</title>
+    <link rel="stylesheet" href="qwerty.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-circle">JP</div>
+            <div class="logo-text">JUSTIN PAUL VALES</div>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-cta">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container hero-container">
+            <h1>Welcome to My Portfolio Website</h1>
+            <p class="hero-intro">I am <strong>Justin Paul Vales</strong>, an aspiring developer fueled by immersive storytelling and complex digital worlds.</p>
+            <div class="hero-btns">
+                <a href="contact.html" class="cta-button">Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal active">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="grid-layout">
+                <div class="ui-card">
+                    <h3>Secure Web Voting System</h3>
+                    <p>A Python Flask-based application featuring a PostgreSQL database, OTP verification, and a responsive dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer"><div class="container"><p>&copy; 2026 Justin Paul Vales. All Rights Reserved.</p></div></footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+        const navList = document.getElementById('nav-list');
+        mobileBtn.addEventListener('click', () => { navList.classList.toggle('show-nav'); });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => { navList.classList.remove('show-nav'); });
+        });
+    </script>
+</body>
+</html>

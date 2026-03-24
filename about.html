@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Justin Paul Vales</title>
+    <link rel="stylesheet" href="qwerty.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container"><div class="logo-circle">JP</div><div class="logo-text">JUSTIN PAUL VALES</div></div>
+        <button class="mobile-menu-btn" id="mobile-cta"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section bg-alt reveal active">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-main-text">Hello! I'm <strong>Justin Paul Vales</strong>. Since my childhood, I have been deeply fascinated by the worlds created in video games and animation. I strive to balance my love for digital adventures with building real-world technical skills.</p>
+            <div class="grid-layout">
+                <div class="ui-card">
+                    <div class="card-header"><span class="card-icon">🎮</span><h3>Classic Gaming</h3></div>
+                    <p>Inspired by <strong>Far Cry 3</strong> and <strong>Resident Evil Series</strong>, I value atmospheric design and logic-based problem solving.</p>
+                </div>
+                <div class="ui-card">
+                    <div class="card-header"><span class="card-icon">🎬</span><h3>Narrative & Art</h3></div>
+                    <p>A fan of the <strong>Fate Series</strong>, I aim to bring that same level of detail and artistic flair to my technical projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+        const navList = document.getElementById('nav-list');
+        mobileBtn.addEventListener('click', () => { navList.classList.toggle('show-nav'); });
+    </script>
+</body>
+</html>

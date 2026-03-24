@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Justin Paul Vales</title>
+    <link rel="stylesheet" href="qwerty.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container"><div class="logo-circle">JP</div><div class="logo-text">JUSTIN PAUL VALES</div></div>
+        <button class="mobile-menu-btn" id="mobile-cta"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="section bg-alt reveal active">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="info-item"><strong>📞 Phone:</strong><p>09979070915</p></div>
+                    <div class="info-item"><strong>📧 Email:</strong><p>justinepauldiaz@gmail.com</p></div>
+                </div>
+                <form action="https://formspree.io/f/xzdarppv" method="POST" id="contact-form" class="contact-form">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" rows="5" placeholder="Message" required></textarea>
+                    <button type="submit" id="submit-btn" class="submit-btn">Send Message</button>
+                    <div id="form-status" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+        const navList = document.getElementById('nav-list');
+        mobileBtn.addEventListener('click', () => { navList.classList.toggle('show-nav'); });
+    </script>
+</body>
+</html>
