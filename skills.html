@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills | Justin Paul Vales</title>
     <link rel="stylesheet" href="qwerty.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo-container"><div class="logo-circle">JP</div><div class="logo-text">JUSTIN PAUL VALES</div></div>
-        <button class="mobile-menu-btn" id="mobile-cta"><span></span><span></span><span></span></button>
+        <div class="logo-container">
+            <div class="logo-circle">JP</div>
+            <div class="logo-text">JUSTIN PAUL VALES</div>
+        </div>
+        <button class="mobile-menu-btn" id="mobile-cta">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links" id="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -22,18 +28,40 @@
     <section class="section reveal active">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
-            <div class="grid-layout three-cols">
-                <div class="ui-card skill-card"><div class="skill-icon">🐍</div><h3>Python</h3><p>Developing clean, efficient scripts and automating complex digital tasks.</p></div>
-                <div class="ui-card skill-card"><div class="skill-icon">🐧</div><h3>Linux Admin</h3><p>Managing systems with command-line precision and robust security practices.</p></div>
-                <div class="ui-card skill-card"><div class="skill-icon">🎨</div><h3>Digital Design & Illustration</h3><p>Bringing imagination to life through detail-oriented sketching and aesthetic design.</p></div>
+            <div class="grid-layout">
+                <div class="ui-card skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Developing clean, efficient scripts and automating complex digital tasks.</p>
+                </div>
+                <div class="ui-card skill-card">
+                    <div class="skill-icon">🐧</div>
+                    <h3>Linux Admin</h3>
+                    <p>Managing systems with command-line precision and robust security practices.</p>
+                </div>
+                <div class="ui-card skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Digital Design</h3>
+                    <p>Bringing imagination to life through detail-oriented sketching and aesthetic design.</p>
+                </div>
+                <div class="ui-card skill-card">
+                    <div class="skill-icon">📸</div>
+                    <h3>Photoshop</h3>
+                    <p>Expert in photo editing, layout design, and creating high-quality visual assets.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer"><div class="container"><p>© 2026 Justin Paul Vales. All Rights Reserved.</p></div></footer>
 
     <script>
         const mobileBtn = document.getElementById('mobile-cta');
         const navList = document.getElementById('nav-list');
         mobileBtn.addEventListener('click', () => { navList.classList.toggle('show-nav'); });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => { navList.classList.remove('show-nav'); });
+        });
     </script>
 </body>
 </html>
